@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IRONFORGE GYM — Where champions are built. Premium fitness center with world-class equipment, expert trainers, and elite training programs." />
+  <meta name="keywords" content="gym, fitness, personal training, IRONFORGE, premium gym, strength training, HIIT, yoga" />
+  <meta property="og:title" content="IRONFORGE GYM — Forge Your Legacy" />
+  <meta property="og:description" content="Premium fitness center with world-class equipment and expert trainers." />
+  <title>IRONFORGE GYM — Forge Your Legacy</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== PARTICLE BACKGROUND ========== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon"><i class="fas fa-fire-flame-curved"></i></span>
+        IRON<span class="accent">FORGE</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Programs</a></li>
+        <li><a href="#trainers" class="nav-link">Trainers</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#pricing" class="btn btn-primary nav-cta">Join Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-bg" style="background-image: url('images/hero_bg.png');"></div>
+    <div class="hero-content" data-reveal>
+      <div class="hero-badge"><i class="fas fa-star"></i> PREMIUM FITNESS EXPERIENCE</div>
+      <h1 class="hero-title">
+        FORGE YOUR<br />
+        <span class="hero-title-accent">LEGACY</span>
+      </h1>
+      <p class="hero-subtitle">
+        Transform your body. Conquer your limits. IRONFORGE is where champions are born — equipped with world-class facilities, elite trainers, and a community that pushes you beyond the ordinary.
+      </p>
+      <div class="hero-buttons">
+        <a href="#pricing" class="btn btn-primary btn-lg">
+          <i class="fas fa-bolt"></i> Start Training
+        </a>
+        <a href="#about" class="btn btn-outline btn-lg">
+          <i class="fas fa-play-circle"></i> Discover More
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="5000">0</span><span class="accent">+</span>
+          <span class="hero-stat-label">Members</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="50">0</span><span class="accent">+</span>
+          <span class="hero-stat-label">Expert Trainers</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="200">0</span><span class="accent">+</span>
+          <span class="hero-stat-label">Equipment</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="12">0</span><span class="accent">+</span>
+          <span class="hero-stat-label">Years Excellence</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ========== ANNOUNCEMENT BANNER ========== -->
+  <div class="announcement-banner">
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <span>🔥 LIMITED OFFER — 30% OFF FIRST MONTH</span>
+        <span>⚡ FREE PERSONAL TRAINING SESSION WITH YEARLY PLANS</span>
+        <span>💪 NEW HIIT CLASSES EVERY MONDAY & THURSDAY</span>
+        <span>🏆 OPEN 24/7 — TRAIN ON YOUR SCHEDULE</span>
+        <span>🔥 LIMITED OFFER — 30% OFF FIRST MONTH</span>
+        <span>⚡ FREE PERSONAL TRAINING SESSION WITH YEARLY PLANS</span>
+        <span>💪 NEW HIIT CLASSES EVERY MONDAY & THURSDAY</span>
+        <span>🏆 OPEN 24/7 — TRAIN ON YOUR SCHEDULE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper" data-reveal="left">
+          <div class="about-image-frame">
+            <img src="images/about_athlete.png" alt="Athlete training at IRONFORGE GYM" class="about-img" />
+          </div>
+          <div class="about-badge-card">
+            <i class="fas fa-trophy"></i>
+            <div>
+              <strong>#1 Ranked</strong>
+              <span>Premium Gym 2024</span>
+            </div>
+          </div>
+          <div class="about-experience-badge">
+            <span class="exp-num">12</span>
+            <span class="exp-text">YEARS OF<br/>EXCELLENCE</span>
+          </div>
+        </div>
+        <div class="about-content" data-reveal="right">
+          <div class="section-tag">ABOUT IRONFORGE</div>
+          <h2 class="section-title">We Don't Just Build <span class="accent">Bodies</span>, We Build <span class="accent">Champions</span></h2>
+          <p class="about-description">
+            Founded in 2012, IRONFORGE GYM has been the premier destination for fitness excellence. We believe every person carries a champion within — our mission is to help you unleash it.
+          </p>
+          <p class="about-description">
+            Our state-of-the-art facility spans 20,000 sq ft of premium equipment, specialized training zones, and recovery areas designed to maximize your performance and results.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>World-Class Equipment & Technology</span>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Certified & Award-Winning Trainers</span>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Nutrition & Recovery Programs</span>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Open 24/7, 365 Days a Year</span>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Exclusive Members-Only Lounge</span>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Progress Tracking & Body Analysis</span>
+            </div>
+          </div>
+          <a href="#pricing" class="btn btn-primary btn-lg">
+            <i class="fas fa-bolt"></i> Join IRONFORGE Today
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES SECTION ========== -->
+  <section id="services" class="section services-section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <div class="section-tag">OUR PROGRAMS</div>
+        <h2 class="section-title">Elite Training <span class="accent">Programs</span></h2>
+        <p class="section-subtitle">From powerlifting to mindful yoga — we have a program perfectly designed for every goal and every level.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-reveal>
+          <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+          <h3>Strength Training</h3>
+          <p>Build raw power and muscle mass with our structured strength programs. From beginner lifts to advanced powerlifting techniques.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-caret-right"></i> Barbell & Dumbbell Training</li>
+            <li><i class="fas fa-caret-right"></i> Progressive Overload Methods</li>
+            <li><i class="fas fa-caret-right"></i> Compound Movements Focus</li>
+          </ul>
+          <a href="#pricing" class="service-cta">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-reveal>
+          <div class="service-icon"><i class="fas fa-fire"></i></div>
+          <h3>HIIT & Cardio</h3>
+          <p>Torch calories and boost endurance with high-intensity intervals. Burn fat, increase metabolism, and build unstoppable stamina.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-caret-right"></i> Battle Ropes & Plyometrics</li>
+            <li><i class="fas fa-caret-right"></i> Circuit Training</li>
+            <li><i class="fas fa-caret-right"></i> Metabolic Conditioning</li>
+          </ul>
+          <a href="#pricing" class="service-cta">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card featured-card" data-reveal>
+          <div class="featured-badge">POPULAR</div>
+          <div class="service-icon"><i class="fas fa-person-running"></i></div>
+          <h3>Personal Training</h3>
+          <p>One-on-one sessions with elite certified trainers. A completely personalized plan built around your unique body and goals.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-caret-right"></i> Custom Workout Plans</li>
+            <li><i class="fas fa-caret-right"></i> Nutrition Guidance</li>
+            <li><i class="fas fa-caret-right"></i> Progress Tracking & Analysis</li>
+          </ul>
+          <a href="#pricing" class="service-cta">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-reveal>
+          <div class="service-icon"><i class="fas fa-spa"></i></div>
+          <h3>Yoga & Flexibility</h3>
+          <p>Restore balance, build flexibility, and find your inner strength. Expert-led sessions for all levels in our dedicated studio.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-caret-right"></i> Power Yoga & Vinyasa</li>
+            <li><i class="fas fa-caret-right"></i> Mobility & Stretching</li>
+            <li><i class="fas fa-caret-right"></i> Mindfulness & Meditation</li>
+          </ul>
+          <a href="#pricing" class="service-cta">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-reveal>
+          <div class="service-icon"><i class="fas fa-hand-fist"></i></div>
+          <h3>Boxing & MMA</h3>
+          <p>Learn the sweet science and combat techniques. Build explosive power, speed, and mental toughness in our dedicated fight zone.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-caret-right"></i> Boxing Fundamentals</li>
+            <li><i class="fas fa-caret-right"></i> Kickboxing & Muay Thai</li>
+            <li><i class="fas fa-caret-right"></i> Sparring Sessions</li>
+          </ul>
+          <a href="#pricing" class="service-cta">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-reveal>
+          <div class="service-icon"><i class="fas fa-apple-whole"></i></div>
+          <h3>Nutrition Coaching</h3>
+          <p>Fuel your transformation with expert dietary guidance. Custom meal plans, supplement advice, and metabolic optimization.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-caret-right"></i> Custom Meal Planning</li>
+            <li><i class="fas fa-caret-right"></i> Macro & Calorie Tracking</li>
+            <li><i class="fas fa-caret-right"></i> Supplement Guidance</li>
+          </ul>
+          <a href="#pricing" class="service-cta">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS BANNER ========== -->
+  <section class="stats-banner">
+    <div class="stats-banner-bg"></div>
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-reveal>
+          <i class="fas fa-users stat-icon"></i>
+          <div class="stat-num" data-count="5000">0</div>
+          <div class="stat-label">Happy Members</div>
+        </div>
+        <div class="stat-item" data-reveal>
+          <i class="fas fa-medal stat-icon"></i>
+          <div class="stat-num" data-count="50">0</div>
+          <div class="stat-label">Expert Trainers</div>
+        </div>
+        <div class="stat-item" data-reveal>
+          <i class="fas fa-dumbbell stat-icon"></i>
+          <div class="stat-num" data-count="200">0</div>
+          <div class="stat-label">Equipment Pieces</div>
+        </div>
+        <div class="stat-item" data-reveal>
+          <i class="fas fa-trophy stat-icon"></i>
+          <div class="stat-num" data-count="150">0</div>
+          <div class="stat-label">Awards Won</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRAINERS SECTION ========== -->
+  <section id="trainers" class="section trainers-section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <div class="section-tag">MEET THE TEAM</div>
+        <h2 class="section-title">Our <span class="accent">Elite</span> Trainers</h2>
+        <p class="section-subtitle">Learn from the best. Our certified trainers bring decades of combined experience and championship-level expertise to every session.</p>
+      </div>
+      <div class="trainers-grid">
+        <div class="trainer-card" data-reveal>
+          <div class="trainer-img-wrapper">
+            <img src="images/trainer_1.png" alt="Marcus Steel — Head Strength Coach" />
+            <div class="trainer-overlay">
+              <div class="trainer-social">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <h3 class="trainer-name">Marcus Steel</h3>
+            <span class="trainer-title">Head Strength Coach</span>
+            <div class="trainer-specialties">
+              <span>Powerlifting</span>
+              <span>Olympic Lifting</span>
+              <span>Strength & Conditioning</span>
+            </div>
+            <div class="trainer-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <span class="rating-num">5.0</span>
+            </div>
+          </div>
+        </div>
+        <div class="trainer-card" data-reveal>
+          <div class="trainer-img-wrapper">
+            <img src="images/trainer_2.png" alt="Sofia Martinez — HIIT & Cardio Specialist" />
+            <div class="trainer-overlay">
+              <div class="trainer-social">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <h3 class="trainer-name">Sofia Martinez</h3>
+            <span class="trainer-title">HIIT & Wellness Expert</span>
+            <div class="trainer-specialties">
+              <span>HIIT</span>
+              <span>Yoga</span>
+              <span>Nutrition</span>
+            </div>
+            <div class="trainer-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <span class="rating-num">4.9</span>
+            </div>
+          </div>
+        </div>
+        <div class="trainer-card" data-reveal>
+          <div class="trainer-img-wrapper">
+            <img src="images/trainer_3.png" alt="Kane Ryker — Boxing & MMA Coach" />
+            <div class="trainer-overlay">
+              <div class="trainer-social">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <h3 class="trainer-name">Kane Ryker</h3>
+            <span class="trainer-title">Boxing & MMA Coach</span>
+            <div class="trainer-specialties">
+              <span>Boxing</span>
+              <span>Muay Thai</span>
+              <span>Combat Conditioning</span>
+            </div>
+            <div class="trainer-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              <span class="rating-num">4.8</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING SECTION ========== -->
+  <section id="pricing" class="section pricing-section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <div class="section-tag">MEMBERSHIP PLANS</div>
+        <h2 class="section-title">Choose Your <span class="accent">Path</span></h2>
+        <p class="section-subtitle">Flexible plans to fit your lifestyle and goals. Cancel anytime. No hidden fees.</p>
+      </div>
+
+      <div class="pricing-tabs" data-reveal>
+        <button class="pricing-tab active" data-plan="monthly">
+          Monthly
+        </button>
+        <button class="pricing-tab" data-plan="quarterly">
+          Quarterly <span class="save-badge">Save 10%</span>
+        </button>
+        <button class="pricing-tab" data-plan="annual">
+          Annual <span class="save-badge">Save 25%</span>
+        </button>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Starter -->
+        <div class="pricing-card" data-reveal>
+          <div class="pricing-header">
+            <div class="pricing-icon"><i class="fas fa-seedling"></i></div>
+            <h3 class="plan-name">Starter</h3>
+            <div class="price-wrapper">
+              <span class="currency">₹</span>
+              <span class="price" data-monthly="999" data-quarterly="2699" data-annual="8988">999</span>
+              <span class="price-period">/month</span>
+            </div>
+            <p class="plan-desc">Perfect for beginners ready to start their fitness journey.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Full Gym Access</li>
+            <li><i class="fas fa-check"></i> 2 Group Classes/Week</li>
+            <li><i class="fas fa-check"></i> Basic Fitness Assessment</li>
+            <li><i class="fas fa-check"></i> Locker Room Access</li>
+            <li class="disabled"><i class="fas fa-times"></i> Personal Training</li>
+            <li class="disabled"><i class="fas fa-times"></i> Nutrition Coaching</li>
+            <li class="disabled"><i class="fas fa-times"></i> Priority Booking</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline plan-btn">Get Started</a>
+        </div>
+
+        <!-- Elite (Popular) -->
+        <div class="pricing-card popular-plan" data-reveal>
+          <div class="popular-badge-label">MOST POPULAR</div>
+          <div class="pricing-header">
+            <div class="pricing-icon"><i class="fas fa-bolt"></i></div>
+            <h3 class="plan-name">Elite</h3>
+            <div class="price-wrapper">
+              <span class="currency">₹</span>
+              <span class="price" data-monthly="1999" data-quarterly="5399" data-annual="17988">1999</span>
+              <span class="price-period">/month</span>
+            </div>
+            <p class="plan-desc">The perfect blend of access, coaching, and results.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Full Gym Access 24/7</li>
+            <li><i class="fas fa-check"></i> Unlimited Group Classes</li>
+            <li><i class="fas fa-check"></i> 4 Personal Training Sessions</li>
+            <li><i class="fas fa-check"></i> Nutrition Plan Included</li>
+            <li><i class="fas fa-check"></i> Progress Tracking App</li>
+            <li><i class="fas fa-check"></i> Locker & Towel Service</li>
+            <li class="disabled"><i class="fas fa-times"></i> VIP Lounge Access</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary plan-btn">Get Started</a>
+        </div>
+
+        <!-- Champion -->
+        <div class="pricing-card" data-reveal>
+          <div class="pricing-header">
+            <div class="pricing-icon"><i class="fas fa-crown"></i></div>
+            <h3 class="plan-name">Champion</h3>
+            <div class="price-wrapper">
+              <span class="currency">₹</span>
+              <span class="price" data-monthly="3499" data-quarterly="9499" data-annual="31188">3499</span>
+              <span class="price-period">/month</span>
+            </div>
+            <p class="plan-desc">The ultimate all-inclusive elite experience for serious athletes.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> All Elite Benefits</li>
+            <li><i class="fas fa-check"></i> Unlimited Personal Training</li>
+            <li><i class="fas fa-check"></i> VIP Lounge & Sauna Access</li>
+            <li><i class="fas fa-check"></i> Advanced Body Composition</li>
+            <li><i class="fas fa-check"></i> Dedicated Personal Trainer</li>
+            <li><i class="fas fa-check"></i> Priority Class Booking</li>
+            <li><i class="fas fa-check"></i> Monthly Health Reports</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline plan-btn">Get Started</a>
+        </div>
+      </div>
+
+      <p class="pricing-note"><i class="fas fa-shield-halved"></i> All plans include a 7-day free trial. No credit card required to start.</p>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY SECTION ========== -->
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <div class="section-tag">OUR FACILITY</div>
+        <h2 class="section-title">Inside <span class="accent">IRONFORGE</span></h2>
+        <p class="section-subtitle">Step inside and see why thousands choose IRONFORGE as their training home.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item large" data-reveal>
+          <img src="images/gallery_1.png" alt="IRONFORGE weight room with premium equipment" />
+          <div class="gallery-overlay">
+            <div class="gallery-label"><i class="fas fa-dumbbell"></i> Weight Room</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-reveal>
+          <img src="images/gallery_2.png" alt="HIIT class at IRONFORGE GYM" />
+          <div class="gallery-overlay">
+            <div class="gallery-label"><i class="fas fa-fire"></i> HIIT Classes</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-reveal>
+          <img src="images/gallery_3.png" alt="Cardio section with modern equipment" />
+          <div class="gallery-overlay">
+            <div class="gallery-label"><i class="fas fa-heart-pulse"></i> Cardio Zone</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-reveal>
+          <img src="images/gallery_4.png" alt="Powerlifting at IRONFORGE GYM" />
+          <div class="gallery-overlay">
+            <div class="gallery-label"><i class="fas fa-trophy"></i> Powerlifting</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-reveal>
+          <img src="images/gallery_5.png" alt="Yoga and flexibility studio" />
+          <div class="gallery-overlay">
+            <div class="gallery-label"><i class="fas fa-spa"></i> Yoga Studio</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-reveal>
+          <img src="images/gallery_6.png" alt="Athlete training on rig" />
+          <div class="gallery-overlay">
+            <div class="gallery-label"><i class="fas fa-person-running"></i> Functional Training</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========== TESTIMONIALS SECTION ========== -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <div class="section-tag">SUCCESS STORIES</div>
+        <h2 class="section-title">Real People. <span class="accent">Real Results.</span></h2>
+        <p class="section-subtitle">Don't take our word for it — hear from the thousands who've transformed their lives at IRONFORGE.</p>
+      </div>
+
+      <div class="testimonials-carousel" data-reveal>
+        <div class="testimonials-track" id="testimonials-track">
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-text">"IRONFORGE completely changed my life. In just 6 months, I lost 45 lbs and gained more confidence than I've ever had. The trainers are absolutely incredible — they genuinely care about your progress."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">JR</div>
+              <div class="testimonial-author-info">
+                <strong>James Rodriguez</strong>
+                <span>Lost 45 lbs in 6 months</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-text">"I've been to many gyms but nothing compares to IRONFORGE. The equipment is premium, the trainers are elite, and the community is beyond supportive. It's not just a gym — it's a lifestyle."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">SC</div>
+              <div class="testimonial-author-info">
+                <strong>Sarah Chen</strong>
+                <span>Member since 2021</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+            <p class="testimonial-text">"Marcus is the best strength coach I've ever worked with. My deadlift went from 200lbs to 385lbs in a year. The programming at IRONFORGE is on another level. Absolutely worth every penny."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">DK</div>
+              <div class="testimonial-author-info">
+                <strong>David Kumar</strong>
+                <span>Strength Training — 2 years</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-text">"Sofia's HIIT classes are the absolute best. I dread and love them at the same time! The nutrition coaching alone was worth the Champion plan. I feel the fittest I've ever been at 42."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">LP</div>
+              <div class="testimonial-author-info">
+                <strong>Lisa Park</strong>
+                <span>Lost 28 lbs, Gained Muscle</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prev-testimonial" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+          <div class="carousel-dots" id="carousel-dots"></div>
+          <button class="carousel-btn" id="next-testimonial" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA BANNER ========== -->
+  <section class="cta-banner">
+    <div class="cta-bg"></div>
+    <div class="container">
+      <div class="cta-content" data-reveal>
+        <h2 class="cta-title">Ready to <span class="accent">Forge</span> Your Future?</h2>
+        <p class="cta-subtitle">Join 5,000+ members who've already transformed their lives. Your first session is FREE — no commitment required.</p>
+        <div class="cta-buttons">
+          <a href="#pricing" class="btn btn-primary btn-xl"><i class="fas fa-bolt"></i> Start Free Trial</a>
+          <a href="#contact" class="btn btn-outline btn-xl"><i class="fas fa-phone"></i> Talk to Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <div class="section-tag">GET IN TOUCH</div>
+        <h2 class="section-title">Let's Start Your <span class="accent">Journey</span></h2>
+        <p class="section-subtitle">Have questions? Ready to join? Fill out the form and our team will get back to you within 24 hours.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info-col" data-reveal="left">
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-location-dot"></i></div>
+            <div>
+              <h4>Our Location</h4>
+              <p>250 Iron District, Fitness Boulevard<br />New York, NY 10001</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Hours</h4>
+              <p>Open 24 Hours, 7 Days a Week<br />365 Days a Year</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <p>+1 (800) IRONFORGE<br />+1 (800) 476-6367</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>info@ironforgeym.com<br />trainers@ironforgeym.com</p>
+            </div>
+          </div>
+          <div class="contact-social">
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-col" data-reveal="right">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="interest">I'm Interested In</label>
+              <select id="interest" name="interest">
+                <option value="">Select a program...</option>
+                <option>Strength Training</option>
+                <option>HIIT & Cardio</option>
+                <option>Personal Training</option>
+                <option>Boxing & MMA</option>
+                <option>Yoga & Flexibility</option>
+                <option>Nutrition Coaching</option>
+                <option>General Membership</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your fitness goals..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+              <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+            </button>
+            <div class="form-success" id="form-success">
+              <i class="fas fa-check-circle"></i>
+              <strong>Message sent!</strong> We'll get back to you within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#hero" class="nav-logo footer-logo">
+              <span class="logo-icon"><i class="fas fa-fire-flame-curved"></i></span>
+              IRON<span class="accent">FORGE</span>
+            </a>
+            <p class="footer-desc">Where champions are built. IRONFORGE GYM has been the premier destination for fitness excellence since 2012.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="footer-links-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Programs</a></li>
+              <li><a href="#trainers">Trainers</a></li>
+              <li><a href="#pricing">Membership</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Programs</h4>
+            <ul>
+              <li><a href="#">Strength Training</a></li>
+              <li><a href="#">HIIT & Cardio</a></li>
+              <li><a href="#">Personal Training</a></li>
+              <li><a href="#">Boxing & MMA</a></li>
+              <li><a href="#">Yoga & Flexibility</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Contact</h4>
+            <ul class="footer-contact-list">
+              <li><i class="fas fa-location-dot"></i> 250 Iron District, NY 10001</li>
+              <li><i class="fas fa-phone"></i> +1 (800) 476-6367</li>
+              <li><i class="fas fa-envelope"></i> info@ironforgeym.com</li>
+              <li><i class="fas fa-clock"></i> Open 24/7</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 IRONFORGE GYM. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <p class="footer-tagline">Built with 🔥 for champions everywhere.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ========== LIGHTBOX — body-level so z-index works against navbar ========== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></button>
+    <button class="lightbox-nav prev" id="lb-prev"><i class="fas fa-chevron-left"></i></button>
+    <div class="lightbox-img-wrapper">
+      <img src="" alt="" id="lightbox-img" />
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+    <button class="lightbox-nav next" id="lb-next"><i class="fas fa-chevron-right"></i></button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
