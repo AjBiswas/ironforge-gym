@@ -1647,7 +1647,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ============================================================
    RESPONSIVE — MOBILE
    ============================================================ */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   :root { --navbar-h: 68px; }
 
   .nav-container {
