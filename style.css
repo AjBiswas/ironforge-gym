@@ -1634,7 +1634,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 @media (max-width: 900px) {
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .stat-item { border-right: none; border-bottom: 1px solid var(--clr-border); }
+  .stat-item { border-right: none; border-bottom: 1px solid var(--clr-border); padding: 1.5rem 1rem; }
   .stat-item:last-child { border-bottom: none; }
   .trainers-grid { grid-template-columns: 1fr 1fr; }
   .trainers-grid .trainer-card:last-child { grid-column: 1 / -1; max-width: 400px; margin: 0 auto; }
@@ -1683,10 +1683,48 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero-stat-divider { display: none; }
   .hero-buttons { flex-direction: column; align-items: flex-start; }
 
-  .services-grid { grid-template-columns: 1fr; }
-  .trainers-grid { grid-template-columns: 1fr; }
-  .trainers-grid .trainer-card:last-child { max-width: 100%; }
-  .pricing-grid { grid-template-columns: 1fr; }
+  /* Premium Horizontal Swipeable lists for App-like look on Mobile */
+  .services-grid,
+  .trainers-grid,
+  .pricing-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    grid-template-columns: none !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 1.2rem !important;
+    padding: 0.5rem 1.2rem 1.5rem !important;
+    margin: 0 -1.2rem !important;
+    scrollbar-width: none !important; /* Firefox */
+  }
+  .services-grid::-webkit-scrollbar,
+  .trainers-grid::-webkit-scrollbar,
+  .pricing-grid::-webkit-scrollbar {
+    display: none !important; /* Safari, Chrome, Opera */
+  }
+
+  .services-grid .service-card,
+  .pricing-grid .pricing-card {
+    min-width: 290px !important;
+    width: 290px !important;
+    flex: 0 0 290px !important;
+    scroll-snap-align: center !important;
+    margin-bottom: 0 !important;
+  }
+
+  .trainers-grid .trainer-card {
+    min-width: 270px !important;
+    width: 270px !important;
+    flex: 0 0 270px !important;
+    scroll-snap-align: center !important;
+  }
+  .trainers-grid .trainer-card:last-child {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
   .about-features { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .about-badge-card { left: 0.5rem; }
