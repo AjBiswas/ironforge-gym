@@ -482,6 +482,78 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 })();
 
 // ──────────────────────────────────────────────
+// AI CHATBOT LOGIC
+// ──────────────────────────────────────────────
+(function initChatbot() {
+  const chatBtn = document.getElementById('chat-btn');
+  const chatWindow = document.getElementById('chat-window');
+  const chatClose = document.getElementById('chat-close');
+  const chatInput = document.getElementById('chat-input');
+  const chatSend = document.getElementById('chat-send');
+  const chatBody = document.getElementById('chat-body');
+
+  if (!chatBtn || !chatWindow) return;
+
+  // Toggle chat window
+  chatBtn.addEventListener('click', () => {
+    chatWindow.classList.add('active');
+    chatInput.focus();
+  });
+
+  chatClose.addEventListener('click', () => {
+    chatWindow.classList.remove('active');
+  });
+
+  // Mock bot responses based on keywords
+  const getBotResponse = (msg) => {
+    const lowerMsg = msg.toLowerCase();
+    if (lowerMsg.includes('price') || lowerMsg.includes('cost') || lowerMsg.includes('plan')) {
+      return "Our plans start at ₹999/month for the Starter plan. The Elite plan is ₹1,999/month, and the Champion plan is ₹3,499/month. You can find more details in the Membership section!";
+    } else if (lowerMsg.includes('hour') || lowerMsg.includes('time') || lowerMsg.includes('open')) {
+      return "IRONFORGE GYM is open 24 hours a day, 7 days a week, 365 days a year for our members.";
+    } else if (lowerMsg.includes('trainer') || lowerMsg.includes('coach') || lowerMsg.includes('personal')) {
+      return "We have over 50 expert trainers specializing in strength, HIIT, boxing, and yoga. You get free personal training sessions with our Elite and Champion plans!";
+    } else if (lowerMsg.includes('hello') || lowerMsg.includes('hi ') || lowerMsg === 'hi') {
+      return "Hello there! Ready to crush your goals today?";
+    } else if (lowerMsg.includes('location') || lowerMsg.includes('where')) {
+      return "We are located at 250 Iron District, Fitness Boulevard, New York, NY 10001.";
+    } else if (lowerMsg.includes('class')) {
+       return "We offer a variety of classes including HIIT, Yoga, Boxing, and Strength training. Check our Programs section!";
+    } else {
+      return "I'm still learning, but I'm here to help! If you have specific questions about our memberships or programs, feel free to contact our team directly at info@ironforgeym.com.";
+    }
+  };
+
+  const addMessage = (text, sender) => {
+    const msgDiv = document.createElement('div');
+    msgDiv.classList.add('chat-msg', sender);
+    msgDiv.textContent = text;
+    chatBody.appendChild(msgDiv);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  };
+
+  const handleSend = () => {
+    const text = chatInput.value.trim();
+    if (!text) return;
+
+    // Add user message
+    addMessage(text, 'user');
+    chatInput.value = '';
+
+    // Simulate bot typing delay
+    setTimeout(() => {
+      const response = getBotResponse(text);
+      addMessage(response, 'bot');
+    }, 600 + Math.random() * 600); // 600-1200ms delay
+  };
+
+  chatSend.addEventListener('click', handleSend);
+  chatInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') handleSend();
+  });
+})();
+
+// ──────────────────────────────────────────────
 // CONSOLE BRANDING
 // ──────────────────────────────────────────────
 console.log(

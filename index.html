@@ -770,6 +770,33 @@
     <button class="lightbox-nav next" id="lb-next"><i class="fas fa-chevron-right"></i></button>
   </div>
 
+  <!-- ========== AI CHATBOT ========== -->
+  <button class="chat-btn" id="chat-btn" aria-label="Open Chat">
+    <i class="fas fa-comment-dots"></i>
+  </button>
+
+  <div class="chat-window" id="chat-window">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar"><i class="fas fa-robot"></i></div>
+        <div>
+          <h4>IRONBOT</h4>
+          <span>Online</span>
+        </div>
+      </div>
+      <button class="chat-close" id="chat-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">
+        Hello! I'm IRONBOT, your personal gym assistant. How can I help you forge your legacy today?
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chat-input" placeholder="Type your message..." />
+      <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
