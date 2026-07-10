@@ -1984,7 +1984,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     bottom: 5rem;
   }
   .chat-btn {
-    bottom: 5.5rem;
-    right: 1.2rem;
+    bottom: 5.2rem;
+    right: 0.75rem;
   }
 }
